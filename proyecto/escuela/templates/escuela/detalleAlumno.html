@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h2>Cursos de {{ alumno.nombre }}</h2>
+    <ul>
+        {% for nota in notas %}
+        <li>{{ nota.curso.nombre }}: {{ nota.nota }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'agregarNota' alumno.id %}">Agregar Curso con Nota</a><br>
+    <a href="{% url 'listaAlumnos' %}">Volver</a>
 </body>
 </html>
