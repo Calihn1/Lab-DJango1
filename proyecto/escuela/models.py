@@ -4,3 +4,8 @@ class Alumno(models.Model):
     nombre = models.CharField(max_length=40)
     def __str__(self):
         return self.nombre
+
+class Curso(models.Model):
+    nombre = models.CharField(max_length=40)
+    def __str__(self):
+        return self.nombre
