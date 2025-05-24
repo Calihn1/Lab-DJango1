@@ -1,4 +1,4 @@
-# Lab-DJango1u
+# Lab-DJango1
 - Curso: Programación Web 2
 - Estudiante: Hilacondo Begazo, Emanuel David
 - Estudiante: Sullca Mamani, Mauro Snayder
