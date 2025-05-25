@@ -6,3 +6,13 @@ def listaAlumnos(request):
     alumnos = Alumno.objects.all()
     return render(request, 'escuela/listaAlumnos.html', {'alumnos': alumnos})
 
+def agregarAlumno(request):
+    if request.method == 'POST':
+        form = AlumnoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('listaAlumnos')
+    else:
+        form = AlumnoForm()
+    return render(request, 'escuela/formulario.html', {'form': form, 'titulo': 'Agregar Alumno'})
+
